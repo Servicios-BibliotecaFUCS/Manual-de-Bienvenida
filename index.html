@@ -8,8 +8,8 @@
     <title>Manual de bienvenida</title>
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:500,600,700,800,900,400,300' rel='stylesheet' type='text/css'>
-
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,13 +17,11 @@
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.theme.css" rel="stylesheet">
 
-
     <!-- Pixeden Icon Font -->
     <link rel="stylesheet" href="css/Pe-icon-7-stroke.css">
 
     <!-- Font Awesome -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
-
 
     <!-- PrettyPhoto -->
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -37,25 +35,30 @@
     <link href="css/animate.css" rel="stylesheet">
     <!-- Responsive CSS -->
     <link href="css/responsive.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
     <!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-    <!-- SOLO ESTA CORRECCIÓN: estilos para que images/logo.png sea redondo y no se deforme -->
+    <!-- CORRECCIÓN: el logo mantiene su proporción (no se recorta en círculo) y se ve nítido -->
     <style>
-      .logo-round {
-        aspect-ratio: 1 / 1;   /* cuadrado */
-        width: 180px;          /* ajusta si quieres otro tamaño */
-        border-radius: 50%;    /* círculo */
-        object-fit: cover;     /* recorta sin estirar */
+      /* Logo genérico (hero/secciones) */
+      .logo-round{
+        max-width: 320px;          /* límite superior de ancho; ajusta si quieres */
+        width: 60%;                /* tamaño fluido en pantallas pequeñas */
+        height: auto;              /* mantiene proporción original */
+        border-radius: 0;          /* sin recorte circular */
+        object-fit: contain;       /* respeta proporciones del PNG */
         display: inline-block;
-        height: auto !important;
+        image-rendering: -webkit-optimize-contrast; /* leve mejora en algunos navegadores */
       }
-      .logo-round--sm { width: 48px; }
-      .navbar .navbar-brand img.logo-round { height: auto !important; }
+      /* Versión pequeña para la barra de navegación */
+      .logo-round--sm{
+        height: 40px;              /* alto cómodo en navbar */
+        width: auto;               /* calcula el ancho según la proporción del logo */
+      }
+      .navbar .navbar-brand{ padding: 10px 15px; } /* centra verticalmente el logo del navbar */
     </style>
 </head>
 
@@ -68,12 +71,11 @@
             <div class="bounce3"></div>
         </div>
     </div>
+    <!-- END PRELOADER -->
 
- <!-- END PRELOADER -->
-
- <!-- =========================
-    Inicio sección menú
-============================== -->
+    <!-- =========================
+        Inicio sección menú
+    ============================== -->
     <section class="header parallax home-parallax page" id="INICIO">
         <h2></h2>
         <div class="section_overlay">
@@ -100,7 +102,6 @@
                             <li><a href="#UBICACION">UBICACIÓN</a></li>
                             <li><a href="#SISBIB">SISTEMA DE BIBLIOTECAS</a> </li>
                             <li><a href="#Recomendaciones">TIPS</a> </li>
-                            <!-- <li><a href="#CONTACT">CONTACT </a> </li> -->
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->
@@ -108,76 +109,49 @@
                 <!-- /.container- -->
             </nav>
 
-    <!-- Finaliza sección menú -->
-
-<!-- =========================
-    Inicio sección Bienvenido
-============================== -->
-
+            <!-- =========================
+                Inicio sección Bienvenido
+            ============================== -->
             <div class="container home-container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="logo text-center">
-                                <!-- LOGO -->
-                            <img src="images/logo.png" alt="" class="logo-round" decoding="async">
+                            <!-- LOGO -->
+                            <img src="images/logo.png" alt="Logo FUCS" class="logo-round" decoding="async">
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                
-                        <div class="home_text">
-                            <!-- TITLE AND DESC -->
-                            <h1 style="text-align: center">
-                                    <strong>¡BIENVENIDO!</strong>
-                            </h1>
-                            <P>
-                                <strong>
-                                    Ahora formas parte del equipo de trabajo del Sistema de Bibliotecas. A continuación conocerás algunas características de nuestra cultura organizacional como la visión, misión y sedes.
-                                </strong>
-                            </P>
-                            <P>
-                                <strong>
-                                    Este manual procurará facilitar un desarrollo tanto profesional como humano, cualquier duda o inquietud podrá ser resuelta por tus compañeros de trabajo, dependiendo el tipo de dificultad.
-                                </strong>
-                            </P>
-                            <p>
-                                <strong>
-                                    La satisfacción de los usuarios es nuestro mayor objetivo, por tal motivo los servicios de información son de alta calidad y contamos con el equipo humano idóneo para la prestación de los mismos, fortaleciendo la comunicación asertiva, el trabajo en equipo y el compromiso en nuestra vida laboral.
-                                </strong>
-                            </p>
-                            
-                            <div class="download-btn">
-                            
-                                <!-- BUTTON -->
-                                <a class="btn home-btn wow fadeInLeft" href="#Recomendaciones">TIPS</a>
-                                <a class="tuor btn wow fadeInRight" href="#GrupoSJ">inicia aquí<i class="fa fa-angle-down"></i></a>
-                              
-                            </div>
+                    <div class="home_text">
+                        <!-- TITLE AND DESC -->
+                        <h1 style="text-align: center"><strong>¡BIENVENIDO!</strong></h1>
+                        <p><strong>Ahora formas parte del equipo de trabajo del Sistema de Bibliotecas. A continuación conocerás algunas características de nuestra cultura organizacional como la visión, misión y sedes.</strong></p>
+                        <p><strong>Este manual procurará facilitar un desarrollo tanto profesional como humano, cualquier duda o inquietud podrá ser resuelta por tus compañeros de trabajo, dependiendo el tipo de dificultad.</strong></p>
+                        <p><strong>La satisfacción de los usuarios es nuestro mayor objetivo, por tal motivo los servicios de información son de alta calidad y contamos con el equipo humano idóneo para la prestación de los mismos, fortaleciendo la comunicación asertiva, el trabajo en equipo y el compromiso en nuestra vida laboral.</strong></p>
+                        <div class="download-btn">
+                            <!-- BUTTON -->
+                            <a class="btn home-btn wow fadeInLeft" href="#Recomendaciones">TIPS</a>
+                            <a class="tuor btn wow fadeInRight" href="#GrupoSJ">inicia aquí<i class="fa fa-angle-down"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-3 col-md-offset-1 col-sm-4">
-                    </div>
+                    <div class="col-md-3 col-md-offset-1 col-sm-4"></div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Finaliza sección bienvenido -->
 
- <!-- =========================
-    Inicio sección Grupo San Jose
-============================== -->
-
+    <!-- =========================
+        Inicio sección Grupo San Jose
+    ============================== -->
     <section class="about page" id="GrupoSJ">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <!-- ABOUT US SECTION TITLE-->
                     <div class="section_title">
                         <h2>Grupo San José</h2>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="inner_about_area">
@@ -185,48 +159,26 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="about_phone wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
-                        <!-- PHONE -->
-                            <img width="500" height="500" src="images/grupo.png" alt=""> 
+                            <img width="500" height="500" src="images/grupo.png" alt="">
                         </div>
                     </div>
                     <div class="col-md-6  wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
-                        <!-- TITLE -->
-                       
-                       <!-- <div class="inner_about_title">
-                            <h2>Why we are best <br> for you</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div> -->
                         <div class="inner_about_desc">
-
-                            <!-- SINGLE DESC -->
                             <div class="single_about_area fadeInUp wow" data-wow-duration=".5s" data-wow-delay="1s">
-                                <!-- ICON -->
                                 <div><i class="pe-7s-ticket"></i></div>
-                                <!-- HEADING DESCRIPTION -->
                                 <h3>La Sociedad de Cirugía de Bogotá - Hospital de San José HJS: </h3>
                                 <p>es una organización privada sin ánimo de lucro, de carácter asistencial y universitario con más de un siglo de experiencia y tradición, que presta atención integral con estándares superiores de calidad brindando la mejor experiencia para el paciente y su familia, y promueve la docencia e investigación en beneficio de la comunidad. </p>
                             </div>
-                            <!-- END SINGLE DESC -->
-                           
-                            <!-- SINGLE DESC -->
                             <div class="single_about_area fadeInUp wow" data-wow-duration=".5s" data-wow-delay="1.5s">
-                                <!-- ICON -->
                                 <div><i class="pe-7s-ticket"></i></div>
-                                <!-- HEADING DESCRIPTION -->
                                 <h3>Fundación Universitaria de Ciencias de la Salud FUCS: </h3>
                                 <p>es una Institución de Educación Superior, que asume con responsabilidad la formación integral del estudiante, en los campos de la ciencia, la investigación, la tecnología y las humanidades; con fundamentos de excelencia académica, sentido ético, social y científico, liderado por un equipo humano altamente calificado; con el fin de permitir el análisis objetivo y racional de los problemas de la comunidad y contribuir a mejorar su calidad de vida.</p>
                             </div>
-                            <!-- END SINGLE DESC -->
-                            
-                            <!-- SINGLE DESC -->
                             <div class="single_about_area fadeInUp wow" data-wow-duration=".5s" data-wow-delay="2s">
-                                <!-- ICON -->
                                 <div><i class="pe-7s-ticket"></i></div>
-                                <!-- HEADING DESCRIPTION -->
                                 <h3>Hospital Infantil Universitario de San José HIUSJ:</h3>
                                 <p> es un Hospital Universitario privado, que presta servicios de alta complejidad, con énfasis materno infantil y trauma. Contamos con un talento humano ético y competente, soportado en la academia y la investigación, brindando atención integral, humana y eficiente, con altos niveles de calidad. </p>
                             </div>
-                            <!-- END SINGLE DESC -->
                         </div>
                     </div>
                 </div>
@@ -237,27 +189,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 wow fadeInLeftBig">
-                    <!-- VIDEO LEFT TITLE -->
                         <div class="video_title">
                             <h2>Fundación Universitaria de Ciencias de la Salud</h2>
-                        
                             <p>¡Conoce nuestro PED 2025! <br><br>
                                 Son nuestros compromisos para cumplir con nuestro propósito superior y visión.<br><br>
                                 Excelencia académica. <br>
                                 Sostenibilidad y crecimiento. <br>
                                 Responsabilidad Ambiental y Social.<br><br>
-                                
-                            
                                 ¡El PED es nuestro plan, nuestro futuro!
-                                </p>
+                            </p>
                         </div>
-                        <div class="video-button">
-                            <!-- BUTTON -->
-                            <!-- <a class="btn btn-primary btn-video" href="#FEATURES" role="button">Features</a> -->
-                        </div>
+                        <div class="video-button"></div>
                     </div>
                     <div class="col-md-6 wow fadeInRightBig">
-                         <!-- VIDEO -->
                         <div class="video">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/SDTDtic_Yys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
@@ -266,23 +210,19 @@
             </div>
         </div>
     </section>
-    <!-- Fin sección Grupo San Jose -->
 
- <!-- =========================
-    Inicio sección miembros del consejo
-============================== -->
-
+    <!-- =========================
+        Inicio sección miembros del consejo
+    ============================== -->
     <section id="MiembrosCS" class="testimonial parallax">
         <div class="section_overlay">
             <div class="container">
-                    <div class="testimonial_caption">
-                        <!-- DESCRIPTION --> 
-                        <h4><span> <strong>Es importante que conozcas a los miembros del Consejo Superior quienes son los que consolidan y dirigen las tres instituciones velando por el adecuado funcionamiento y cumplimiento a las metas organizacionales.</strong> </span></h4>
-                    </div>
+                <div class="testimonial_caption">
+                    <h4><span> <strong>Es importante que conozcas a los miembros del Consejo Superior quienes son los que consolidan y dirigen las tres instituciones velando por el adecuado funcionamiento y cumplimiento a las metas organizacionales.</strong> </span></h4>
+                </div>
                 <div class="row">
                     <div class="col-md-12 wow bounceInDown">
                         <div id="carousel-example-caption-testimonial" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
                             <ol class="carousel-indicators">
                                 <li data-target="#carousel-example-caption-testimonial" data-slide-to="0" class="active"></li>
                                 <li data-target="#carousel-example-caption-testimonial" data-slide-to="1"></li>
@@ -296,16 +236,13 @@
                                 <li data-target="#carousel-example-caption-testimonial" data-slide-to="9"></li>
                             </ol>
 
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner"> 
+                            <div class="carousel-inner">
                                 <div class="item active">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <!-- IMAGE -->
                                                 <img src="images/MiembroConsejo1.png" alt="">
                                                 <div class="testimonial_caption">
-                                                   <!-- DESCRIPTION -->  
                                                     <h2>Dr. Jorge Gómez Cusnir</h2>
                                                     <h4><span>Presidente del Consejo Superior de la FUCS y de la Sociedad de Cirugía de Bogotá</span></h4>
                                                 </div>
@@ -317,10 +254,8 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                 <!-- IMAGE -->
-                                                <img width="210" height="203"src="images/MiembroConsejo2.png" alt="">
+                                                <img width="210" height="203" src="images/MiembroConsejo2.png" alt="">
                                                 <div class="testimonial_caption">
-                                                <!-- DESCRIPTION --> 
                                                     <h2>Dr. Ricardo Durán Acuña</h2>
                                                     <h4><span>Vicepresidente de la Sociedad de Cirugía de Bogotá Hospital de San José</span></h4>
                                                 </div>
@@ -332,10 +267,8 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <!-- IMAGE -->
                                                 <img src="images/MiembroConsejo3.png" alt="">
                                                 <div class="testimonial_caption">
-                                                <!-- DESCRIPTION --> 
                                                     <h2>Dr. Sergio Augusto Parra Duarte</h2>
                                                     <h4><span>Rector</span> </h4>
                                                 </div>
@@ -347,10 +280,8 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <!-- IMAGE -->
                                                 <img src="images/MiembroConsejo4.png" alt="">
                                                 <div class="testimonial_caption">
-                                                <!-- DESCRIPTION --> 
                                                     <h2>Dr. Darío Cadena Rey</h2>
                                                     <h4><span>Rector honorario</span> </h4>
                                                 </div>
@@ -362,10 +293,8 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <!-- IMAGE -->
-                                                <img width="210" height="210"src="images/MiembroConsejo5.png" alt="">
+                                                <img width="210" height="210" src="images/MiembroConsejo5.png" alt="">
                                                 <div class="testimonial_caption">
-                                                <!-- DESCRIPTION --> 
                                                     <h2>Dr. Jorge Luis Alfredo Herrera Ariza</h2>
                                                     <h4><span>Secretario General</span> </h4>
                                                 </div>
@@ -377,10 +306,8 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <!-- IMAGE -->
                                                 <img src="images/MiembroConsejo6.png" alt="">
                                                 <div class="testimonial_caption">
-                                                <!-- DESCRIPTION --> 
                                                     <h2>Dr. Carlos Humberto Perez Moreno</h2>
                                                     <h4><span>Director Hospital de San José</span> </h4>
                                                 </div>
@@ -392,10 +319,8 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <!-- IMAGE -->
                                                 <img src="images/MiembroConsejo7.png" alt="">
                                                 <div class="testimonial_caption">
-                                                <!-- DESCRIPTION --> 
                                                     <h2>Dra. Laima Didziulis G.</h2>
                                                     <h4><span>Directora Hospital Infantil Universitario de San José</span> </h4>
                                                 </div>
@@ -407,10 +332,8 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <!-- IMAGE -->
                                                 <img width="210" height="203" src="images/MiembroConsejo8.png" alt="">
                                                 <div class="testimonial_caption">
-                                                <!-- DESCRIPTION --> 
                                                     <h2>Dra. Ivonne Andrea Bohórquez Rodríguez</h2>
                                                     <h4><span>Representante de Egresados</span> </h4>
                                                 </div>
@@ -422,10 +345,8 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <!-- IMAGE -->
                                                 <img width="210" height="203" src="images/MiembroConsejo9.png" alt="">
                                                 <div class="testimonial_caption">
-                                                <!-- DESCRIPTION --> 
                                                     <h2>Dra. Merideidy Plazas Vargas</h2>
                                                     <h4><span>Representante de Profesores</span> </h4>
                                                 </div>
@@ -437,10 +358,8 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <!-- IMAGE -->
-                                                <img  width="210" height="203"src="images/MiembroConsejo10.png" alt="">
+                                                <img width="210" height="203" src="images/MiembroConsejo10.png" alt="">
                                                 <div class="testimonial_caption">
-                                                <!-- DESCRIPTION --> 
                                                     <h2>Aurora Rincón León</h2>
                                                     <h4><span>Representante de Profesores</span> </h4>
                                                 </div>
@@ -457,22 +376,17 @@
         </div>
     </section>
 
-    <!-- Fin sección  miembros del consejo-->
-
-<!-- =========================
-     Inicio sección Ubicación
-============================== -->
-
+    <!-- =========================
+         Inicio sección Ubicación
+    ============================== -->
     <section id="UBICACION" class="features page">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <!-- FEATURES SECTION TITLE -->
                     <div class="section_title wow fadeIn" data-wow-duration="1s">
                         <h2>Nuestra Ubicación</h2>
                         <p>Actualmente estamos presentes en seis ( 6 ) sedes de práctica y formación, que permiten desarrollar las áreas del conocimiento:</p>
                     </div>
-                    <!-- END FEATURES SECTION TITLE -->
                 </div>
             </div>
         </div>
@@ -481,19 +395,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 right_no_padding wow fadeInLeft" data-wow-duration="1s">
-                        <!-- FEATURE -->
-
                         <div class="left_single_feature">
-                            <!-- ICON -->
                             <div><span class="pe-7s-map-2"></span></div>
-
-                            <!-- FEATURE HEADING AND DESCRIPTION -->
                             <h3>Hospital Infantil Universitario de San José - Sede Norte<span>/</span></h3>
                             <p>Ubicado en Cra. 52 No. 67A - 71 <br> </p>
                         </div>
-
-                        <!-- END SINGLE FEATURE -->
-
 
                         <div class="left_single_feature">
                             <div><span class="pe-7s-map-2"></span></div>
@@ -515,14 +421,11 @@
 
                     </div>
                     <div class="col-md-4">
-                        <div class="feature_iphone">
-                            <!-- FEATURE PHONE IMAGE -->
-                            </div>
-                            <img class="wow bounceIn logo-round" data-wow-duration="1s" src="images/logo.png" alt="" decoding="async">
-                        </div>
+                        <div class="feature_iphone"></div>
+                        <!-- Mismo logo, respetando proporción -->
+                        <img class="wow bounceIn logo-round" data-wow-duration="1s" src="images/logo.png" alt="" decoding="async">
                     </div>
                     <div class="col-md-4 left_no_padding wow fadeInRight" data-wow-duration="1s">
-
                         <div class="left_single_feature">
                             <div><span class="pe-7s-map-2"></span></div>
                             <h3><span>/</span>Sede Cúcuta</h3>
@@ -535,7 +438,7 @@
                             <p>Cra 49 No. 95 - 79 <br> </p>
                         </div>
 
-                         <div class="left_single_feature">
+                        <div class="left_single_feature">
                             <div><span class="pe-7s-map-2"></span></div>
                             <h3><span>/</span>Edificio Sergio A. Parra Duarte</h3>
                             <p>Carrera 51 No. 67ª-70 <br> </p>
@@ -546,46 +449,43 @@
             </div>
         </div>
     </section>
-    <!--fin sección Ubicación-->
 
-<!-- =========================
-     inicio sección Valores y competencias organizacionales
-============================== -->
-
+    <!-- =========================
+         inicio sección Valores y competencias organizacionales
+    ============================== -->
     <section class="fun_facts parallax">
         <div class="section_overlay">
             <div class="container wow bounceInLeft" data-wow-duration="1s">
                 <div class="row text-center">
-                   
                     <div class="testimonial_caption">
                         <h2>Competencias Organizacionales</h2>
                     </div>
                     <div class="col-md-6">
                         <div class="single_fun_facts">
                             <i class="pe-7s-refresh-2"></i>
-                            <h2><span  class="counter_num">100</span> <span>+</span></h2>
+                            <h2><span class="counter_num">100</span> <span>+</span></h2>
                             <p><strong> Liderazgo</strong></p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="single_fun_facts">
                             <i class="pe-7s-refresh-2"></i>
-                            <h2><span  class="counter_num">100</span> <span>+</span></h2>
+                            <h2><span class="counter_num">100</span> <span>+</span></h2>
                             <p><strong> Productividad e Integridad </strong> </p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="single_fun_facts">
                             <i class="pe-7s-refresh-2"></i>
-                            <h2><span  class="counter_num">100</span> <span>+</span></h2>
-                            <p> <strong>Disciplina personal</strong></p> 
+                            <h2><span class="counter_num">100</span> <span>+</span></h2>
+                            <p><strong>Disciplina personal</strong></p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="single_fun_facts">
                             <i class="pe-7s-refresh-2"></i>
-                            <h2><span  class="counter_num">100</span> <span>+</span></h2>
-                            <p> <strong>Comunicación organizacional </strong></p><br> 
+                            <h2><span class="counter_num">100</span> <span>+</span></h2>
+                            <p><strong>Comunicación organizacional </strong></p><br>
                         </div>
                     </div>
                     <br>
@@ -595,28 +495,28 @@
                     <div class="col-md-6">
                         <div class="single_fun_facts">
                             <i class="pe-7s-rocket"></i>
-                            <h2><span  class="counter_num">100</span> <span>+</span></h2>
+                            <h2><span class="counter_num">100</span> <span>+</span></h2>
                             <p><strong> Respeto</strong></p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="single_fun_facts">
                             <i class="pe-7s-rocket"></i>
-                            <h2><span  class="counter_num">100</span> <span>+</span></h2>
+                            <h2><span class="counter_num">100</span> <span>+</span></h2>
                             <p><strong>Rigor científico</strong></p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="single_fun_facts">
                             <i class="pe-7s-rocket"></i>
-                            <h2><span  class="counter_num">100</span> <span>+</span></h2>
+                            <h2><span class="counter_num">100</span> <span>+</span></h2>
                             <p><strong>Compromiso</strong></p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="single_fun_facts">
                             <i class="pe-7s-rocket"></i>
-                            <h2><span  class="counter_num">100</span> <span>+</span></h2>
+                            <h2><span class="counter_num">100</span> <span>+</span></h2>
                             <p><strong>Honestidad</strong></p>
                         </div>
                     </div>
@@ -626,281 +526,238 @@
         </div>
     </section>
 
-    <!-- fin sección Valores y competencias organizacionales -->
-
-<!-- =========================
-     Inicio sección sistema de bibliotecas
-============================== -->
+    <!-- =========================
+         Inicio sección sistema de bibliotecas
+    ============================== -->
     <section class="apps_screen page" id="SISBIB">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 wow fadeInBig" data-wow-duration="1s">
-                        <!-- APPS SCREEN TITLE -->
-                        <div class="section_title">
-                            <h2>SISTEMA DE BIBLIOTECAS</h2>
-                            <p> <strong>MISIÓN</strong><br>
-                            Satisfacer las necesidades de información de la comunidad académica, investigativa y de proyección social, a través de servicios de calidad que desarrollen competencias para el acceso y uso a los recursos bibliográficos y tecnológicos, dentro de los principios y valores que rigen a la Institución.
-                            </p>
-                            <p><strong>VISIÓN</strong><br>
-                            Ser líderes en la gestión de información, logrando reconocimiento por el trabajo cooperativo a nivel nacional e internacional en un ambiente laboral participativo.
-                            </p> <br>
-                            <p><strong>ORGANIGRAMA</strong><br>
-                                En el siguiente diagrama podrás observar nuestra estructura organizacional <br> <br>
-                            </p> 
-                                <img width="700" height="600" src="images/Orga.jpg" alt=""><br><br>
-                            
-                            <p><strong>HORARIOS</strong><br>
-                                El Sistema de Bibliotecas presta sus servicios en dos (2) sedes: <br><br><br>
-                                <strong><em>Sede: Hospital San José - Biblioteca Arturo Aparicio Jaramillo</em></strong> <br>
-
-                               <br> <img src="images/biblioteca_arturo.jpg" alt=""> <br><br> <img src="images/Auditorio.JPG" width="700" height="400" alt="APPS SCREEN"> <br><br>
-                             
-                                Horario: lunes a viernes de 7:00 a.m. a 7:00 p.m. <br>
-                                Sábados de 8:00 a.m. a 3:00 p.m. <br>
-                                Dirección: Carrera 19 No. 8 A 32 <br><br><br>
-                                <strong><em>Sede: HIUSJ - Biblioteca Darío Cadena Rey</em></strong> <br>
-
-                                <br> <img src="images/BibliotecaDaríoCadenaRey.jpg" alt=""> <br><br> <img src="images/BVS.JPG" width="700" height="400" alt="APPS SCREEN"> <br><br>
-
-                                Horario: lunes a viernes de 7:00 a.m. a 10:00 p.m. <br>
-                                Sábados de 8:00 a.m. a 3:00 p.m <br>
-                                Dirección: Carrera 52 No. 67 A 71 <br><br>
-                            </p>
-                            
-                            <p><strong>SISTEMA DE GESTIÓN DE CALIDAD</strong><br>
-                                Estamos Certificados en Calidad bajo la norma “ISO 9001:2015, Sistemas de Gestión de la Calidad: requisitos” por ICONTEC, máximo organismo de certificación colombiano, quien a su vez nos avala internacionalmente con el certificado de calidad de IQNET, con alcance a la Gestión de Colecciones y Servicios de información del Sistema de Bibliotecas. <br><br>
-                                <strong>POLÍTICA DE CALIDAD </strong> <br>
-                                Apoyar el proceso académico, investigativo y de proyección social de la Institución, garantizando el acceso, disponibilidad, actualidad y calidad de los recursos bibliográficos y servicios de información, contando con la infraestructura física y tecnológica adecuada, con el equipo humano idóneo, basados en una mejora continua de nuestros procesos. <br><br>
-                                <strong> OBJETIVOS DE CALIDAD </strong> <br>
-                                <ul>
-                                    <li>Apoyar el proceso académico, investigativo y de proyección social de la Universidad</li>
-                                    <li>Garantizar el acceso, disponibilidad, actualidad y calidad de los recursos bibliográficos y servicios de información</li>
-                                    <li>Contar con la infraestructura física y tecnológica adecuada</li>
-                                    <li>Asegurar la competencia del personal</li>
-                                    <li>Mejorar continuamente nuestro Sistema de Gestión de Calidad</li>
-                                </ul>
-                            </p>
-                        </div>
-                        <!-- END APPS SCREEN TITLE -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 wow fadeInBig" data-wow-duration="1s">
+                    <div class="section_title">
+                        <h2>SISTEMA DE BIBLIOTECAS</h2>
+                        <p><strong>MISIÓN</strong><br>
+                        Satisfacer las necesidades de información de la comunidad académica, investigativa y de proyección social, a través de servicios de calidad que desarrollen competencias para el acceso y uso a los recursos bibliográficos y tecnológicos, dentro de los principios y valores que rigen a la Institución.
+                        </p>
+                        <p><strong>VISIÓN</strong><br>
+                        Ser líderes en la gestión de información, logrando reconocimiento por el trabajo cooperativo a nivel nacional e internacional en un ambiente laboral participativo.
+                        </p><br>
+                        <p><strong>ORGANIGRAMA</strong><br>
+                            En el siguiente diagrama podrás observar nuestra estructura organizacional <br><br>
+                        </p>
+                        <img width="700" height="600" src="images/Orga.jpg" alt=""><br><br>
+                        <p><strong>HORARIOS</strong><br>
+                            El Sistema de Bibliotecas presta sus servicios en dos (2) sedes: <br><br><br>
+                            <strong><em>Sede: Hospital San José - Biblioteca Arturo Aparicio Jaramillo</em></strong> <br>
+                            <br> <img src="images/biblioteca_arturo.jpg" alt=""> <br><br> <img src="images/Auditorio.JPG" width="700" height="400" alt="APPS SCREEN"> <br><br>
+                            Horario: lunes a viernes de 7:00 a.m. a 7:00 p.m. <br>
+                            Sábados de 8:00 a.m. a 3:00 p.m. <br>
+                            Dirección: Carrera 19 No. 8 A 32 <br><br><br>
+                            <strong><em>Sede: HIUSJ - Biblioteca Darío Cadena Rey</em></strong> <br>
+                            <br> <img src="images/BibliotecaDaríoCadenaRey.jpg" alt=""> <br><br> <img src="images/BVS.JPG" width="700" height="400" alt="APPS SCREEN"> <br><br>
+                            Horario: lunes a viernes de 7:00 a.m. a 10:00 p.m. <br>
+                            Sábados de 8:00 a.m. a 3:00 p.m <br>
+                            Dirección: Carrera 52 No. 67 A 71 <br><br>
+                        </p>
+                        <p><strong>SISTEMA DE GESTIÓN DE CALIDAD</strong><br>
+                            Estamos Certificados en Calidad bajo la norma “ISO 9001:2015, Sistemas de Gestión de la Calidad: requisitos” por ICONTEC, máximo organismo de certificación colombiano, quien a su vez nos avala internacionalmente con el certificado de calidad de IQNET, con alcance a la Gestión de Colecciones y Servicios de información del Sistema de Bibliotecas. <br><br>
+                            <strong>POLÍTICA DE CALIDAD </strong> <br>
+                            Apoyar el proceso académico, investigativo y de proyección social de la Institución, garantizando el acceso, disponibilidad, actualidad y calidad de los recursos bibliográficos y servicios de información, contando con la infraestructura física y tecnológica adecuada, con el equipo humano idóneo, basados en una mejora continua de nuestros procesos. <br><br>
+                            <strong> OBJETIVOS DE CALIDAD </strong> <br>
+                            <ul>
+                                <li>Apoyar el proceso académico, investigativo y de proyección social de la Universidad</li>
+                                <li>Garantizar el acceso, disponibilidad, actualidad y calidad de los recursos bibliográficos y servicios de información</li>
+                                <li>Contar con la infraestructura física y tecnológica adecuada</li>
+                                <li>Asegurar la competencia del personal</li>
+                                <li>Mejorar continuamente nuestro Sistema de Gestión de Calidad</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </div>
-
+        </div>
     </section>
 
-    <!-- fin sección sistema de bibliotecas -->
-
-<!-- =========================
-     NUESTRO LOGROS
-============================== -->
-<section class="download page">
-
+    <!-- =========================
+         NUESTRO LOGROS
+    ============================== -->
+    <section class="download page">
         <div style="background-color:#4682B4;" class="available_store">
             <div class="container  wow bounceInRight" data-wow-duration="1s">
-                <br>
-                <br>
+                <br><br>
                 <h2 style="color:white; text-align:center">Nuestros Logros</h2>
                 <div class="col-md-6">
                     <div class="available_title">
                         <ul style="color:white; text-align:justify ">
-                            <li> Lanzamiento del Repositorio Digital Institucional - ReDi orientado a dar visibilidad de la producción institucional bajo la iniciativa de acceso abierto. </li>
-                            <br>
-                            <li> La Federación Internacional de Asociaciones de Bibliotecarios y Bibliotecas - IFLA aprobó el proyecto como presidentes de la Red de Bibliotecas Médicas UNIRECS, y fuimos seleccionados para replicar el taller de fortalecimiento gremial BSLA 2017 (Región Caribe, Santanderes y Cali). </li>
-                            <br>
-                            <li> Fortalecimos la colección bibliográfica incluyendo recursos como: Eureka, Read It y Education source.</li>
-                            <br>
-                            <li> Fuimos re-certificados con la norma ISO:9001-2015 en Servicios de Información y Desarrollo de Colecciones, 2011-2020. </li>
-                            <br> 
-                            <li> Lanzamiento del nuevo servicio “Biblioteca de Bolsillo” el cual invita a la comunidad académica a generar hábitos lectores en temáticas diferentes a las Ciencias de la salud. </li>
-                            <br>
+                            <li> Lanzamiento del Repositorio Digital Institucional - ReDi orientado a dar visibilidad de la producción institucional bajo la iniciativa de acceso abierto. </li><br>
+                            <li> La Federación Internacional de Asociaciones de Bibliotecarios y Bibliotecas - IFLA aprobó el proyecto como presidentes de la Red de Bibliotecas Médicas UNIRECS, y fuimos seleccionados para replicar el taller de fortalecimiento gremial BSLA 2017 (Región Caribe, Santanderes y Cali). </li><br>
+                            <li> Fortalecimos la colección bibliográfica incluyendo recursos como: Eureka, Read It y Education source.</li><br>
+                            <li> Fuimos re-certificados con la norma ISO:9001-2015 en Servicios de Información y Desarrollo de Colecciones, 2011-2020. </li><br> 
+                            <li> Lanzamiento del nuevo servicio “Biblioteca de Bolsillo” el cual invita a la comunidad académica a generar hábitos lectores en temáticas diferentes a las Ciencias de la salud. </li><br>
                             <li> Coordinadores de la Biblioteca Virtual de Salud en Colombia por el periodo 2016-2019 y reelegidos para el periodo 2019-2021 bajo el Acuerdo de cooperación técnica entre
                                  la Fundación Universitaria De Ciencias De La Salud – FUCS y la Organización Panamericana de la Salud/Oficina Regional para las Américas de la Organización Mundial de la Salud para reforzar el la consolidación y posicionamiento de la BVS en Colombia y su sostenibilidad
-                            <br>
-                            <br>
-                            <li> ¡Somos excelentes en servicio al usuario! 93% de nuestros usuarios califican como bueno y excelente</li>   
-                            <br>
-                            <li> Lanzamiento del nuevo sistema de búsqueda de información лeCHO </li> 
-                            </li>
-                        </ul>                        
+                            <br><br>
+                            <li> ¡Somos excelentes en servicio al usuario! 93% de nuestros usuarios califican como bueno y excelente</li><br>
+                            <li> Lanzamiento del nuevo sistema de búsqueda de información лeCHO </li>
+                        </ul>
                         <br><br>
                     </div>
                 </div>
 
                 <div class="col-md-6">
-                        <div class="available_title">
-                          <p style="text-align: center;"> <img src="images/Logro2.jpeg" width="635" height="850" alt="Logros"> </p>
-                        </div>
+                    <div class="available_title">
+                        <p style="text-align: center;"> <img src="images/Logro2.jpeg" width="635" height="850" alt="Logros"> </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- END DOWNLOAD -->
 
-    <!--
-=========================
-    Inicio sección Imágenes Ubicación
-============================== -->
- <div class="call_to_action">
-    <div class="container">
-          <div class="row wow fadeInLeftBig" data-wow-duration="1s">
-                <div >
-                  <p align="center"> <strong> ¡Ahora haces parte de este maravilloso equipo de trabajo!</strong> </p>
-              </div>
-          </div>
+    <!-- =========================
+        Inicio sección Imágenes Ubicación
+    ============================== -->
+    <div class="call_to_action">
+        <div class="container">
+            <div class="row wow fadeInLeftBig" data-wow-duration="1s">
+                <div>
+                    <p align="center"> <strong> ¡Ahora haces parte de este maravilloso equipo de trabajo!</strong> </p>
+                </div>
+            </div>
         </div>  
 
-      <div class="screen_slider">
-          <div id="demo" class="wow bounceInRight" data-wow-duration="1s">
-              <div id="owl-demo" class="owl-carousel">
-                  <div class="item">
-                      <img src="images/marisol-goyeneche.png" width="60" height="60" alt="APPS SCREEN" />
-                      <p align="center"> <strong>Dirección Biblioteca</strong><br>
-                        Marisol Goyeneche Reina<br>
-                        Tel. 3538100 Ext. 1540 
-                    </p>
-                </div>
-                
-                <div class="item">
-                    <img src="images/LorenaNino.png" width="60" height="60" alt="APPS SCREEN" />
-                    <p align="center"> <strong>Líder Proyecto BVS Colombia </strong><br>
-                        Ana Lorena Niño <br>
-                        Tel. 4375400 Ext. 1542
-                    </p>
-                </div>
-                
-                <div class="item">
-                    <img src="images/jorge-rojas.png" width="60" height="60" alt="APPS SCREEN" />
-                      <p align="center"> <strong>Coordinación de Desarrollo <br> de Colecciones</strong><br>
-                        Jorge Antonio Rojas<br>
-                        Tel. 3538100 Ext. 1544
-                        </strong> </p>
-                  </div>
-
-                  <div class="item">
-                      <img src="images/YorleyTorres.png" width="60" height="60" alt="APPS SCREEN" />
-                      <p align="center"> <strong>Desarrollo de Colecciones </strong><br>
-                        Yorlhey Torres Duarte<br>
-                        Tel. 3538100 Ext. 1550
-                    </p>
-                </div>
-                
-                <div class="item">
-                    <img src="images/Sary.jpg" width="10" height="10" alt="APPS SCREEN" />
-                    <p align="center"> <strong>Desarrollo de Colecciones  </strong><br>
-                    Saribeth Alfaro <br>
-                    Tel. 3538100  Ext. 1550
-                    </p>
-                </div>
-
-                <div class="item">
-                    <img src="images/EdwinTarquiano.jpg" width="60" height="60" alt="APPS SCREEN" />
-                    <p align="center"> <strong>Coordinación de Servicios </strong> <br>
-                        Edwin Daniel Tarquino Quiroga <br>
-                        Tel. 3538100 Ext. 1541
-                    </p>
-                </div>
-
-                <div class="item">
-                    <img src="images/MarthaCorrea_0.jpg" width="60" height="60" alt="APPS SCREEN" />
-                    <p align="center"> <strong>Coordinación de Servicios </strong><br>
-                        Martha Lorena Correa López<br>
-                        Tel. 4375400 Ext. 1543
-                    </p>
-                </div>
-                
-                <!--
+        <div class="screen_slider">
+            <div id="demo" class="wow bounceInRight" data-wow-duration="1s">
+                <div id="owl-demo" class="owl-carousel">
                     <div class="item">
-                        <img src="images/JuanCarlosSegura.png" width="60" height="60" alt="APPS SCREEN" />
-                        <p align="center"> <strong>Servicio al Usuario </strong><br>
-                            Jan Carlos Segura Gil<br>
-                            Tel. 3538100 Ext. 3590
+                        <img src="images/marisol-goyeneche.png" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Dirección Biblioteca</strong><br>
+                            Marisol Goyeneche Reina<br>
+                            Tel. 3538100 Ext. 1540 
                         </p>
                     </div>
-                -->
-                
-                <div class="item">
-                    <img src="images/Yeison Fernando Correa Arango.jpeg" width="60" height="60" alt="APPS SCREEN" />
-                    <p align="center"> <strong>Servicio al Usuario  </strong><br>
-                        Yeison Fernando Correa Arango <br>
-                        Tel. 4375400 Ext. 1549
-                    </p>
-                </div>
-                <div class="item">
-                    <img src="images/AndresCaldon.png" width="60" height="60" alt="APPS SCREEN" />
-                    <p align="center"> <strong>Servicio al Usuario  </strong><br>
-                        Carlos Andrés Caldón Arias <br>
-                        Tel. 4375400 Ext. 1551
-                    </p>
-                </div>
-                <div class="item">
-                    <img src="images/SEGI.jpg" width="10" height="10" alt="APPS SCREEN" />
-                    <p align="center"> <strong>Servicio al Usuario </strong> <br>
-                        Sergio Ballesteros Cristancho <br>
-                        Tel. 4375400 Ext. 1549
-                    </p>
-                </div>
-		      
-                <div class="item">
-                    <img src="images/Ruth Maria Vasquez Cedeño.png" width="60" height="60" alt="APPS SCREEN" />
-                    <p align="center"> <strong>Servicio al Usuario  </strong><br>
-                        Ruth Maria Vasquez Cedeño <br>
-                        Tel. 4375400 Ext. 1546
-                    </p>
-                </div>
-                <div class="item">
-                    <img src="images/AngelicaMunoz.png" width="60" height="60" alt="APPS SCREEN" />
-                    <p align="center"> <strong>Servicio al Usuario  </strong><br>
-                        Ruth Angélica Muñoz Bermejo <br>
-                        Tel. 3538100 Ext. 1548 
-                    </p>
-                </div>
-                <div class="item">
-                    <img src="images/estelaVelosa.png" width="60" height="60" alt="APPS SCREEN" />
-                    <p align="center"> <strong>Servicio al Usuario  </strong><br>
-                        Stella Velosa Corredor<br>
-                        Tel. 4375400 Ext. 1552
-                    </p>
-                </div>
-                <div class="item">
-                    <img src="images/ClaudiaSaray.png" width="60" height="60" alt="APPS SCREEN" />
-                    <p align="center"> <strong>Servicio al Usuario  </strong><br>
-                        Claudia Constanza Saray Baquero <br>
-                        Tel: 3538100 Ext: 1547
-                    </p>
-                </div>
-
-                
-                <div class="item">
-                     <img src="images/Eliana_Mora.jpg" width="60" height="60" alt="APPS SCREEN" />
-                     <p align="center"> <strong>Servicio al Usuario </strong><br>
-                        Eliana Marcelly Mora Gonzalez<br>
-                        Tel. 3538100 Ext. 1546
+                    
+                    <div class="item">
+                        <img src="images/LorenaNino.png" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Líder Proyecto BVS Colombia </strong><br>
+                            Ana Lorena Niño <br>
+                            Tel. 4375400 Ext. 1542
                         </p>
-                 </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="images/jorge-rojas.png" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Coordinación de Desarrollo <br> de Colecciones</strong><br>
+                            Jorge Antonio Rojas<br>
+                            Tel. 3538100 Ext. 1544
+                        </p>
+                    </div>
+
+                    <div class="item">
+                        <img src="images/YorleyTorres.png" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Desarrollo de Colecciones </strong><br>
+                            Yorlhey Torres Duarte<br>
+                            Tel. 3538100 Ext. 1550
+                        </p>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="images/Sary.jpg" width="10" height="10" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Desarrollo de Colecciones  </strong><br>
+                            Saribeth Alfaro <br>
+                            Tel. 3538100  Ext. 1550
+                        </p>
+                    </div>
+
+                    <div class="item">
+                        <img src="images/EdwinTarquiano.jpg" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Coordinación de Servicios </strong> <br>
+                            Edwin Daniel Tarquino Quiroga <br>
+                            Tel. 3538100 Ext. 1541
+                        </p>
+                    </div>
+
+                    <div class="item">
+                        <img src="images/MarthaCorrea_0.jpg" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Coordinación de Servicios </strong><br>
+                            Martha Lorena Correa López<br>
+                            Tel. 4375400 Ext. 1543
+                        </p>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="images/Yeison Fernando Correa Arango.jpeg" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Servicio al Usuario  </strong><br>
+                            Yeison Fernando Correa Arango <br>
+                            Tel. 4375400 Ext. 1549
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="images/AndresCaldon.png" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Servicio al Usuario  </strong><br>
+                            Carlos Andrés Caldón Arias <br>
+                            Tel. 4375400 Ext. 1551
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="images/SEGI.jpg" width="10" height="10" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Servicio al Usuario </strong> <br>
+                            Sergio Ballesteros Cristancho <br>
+                            Tel. 4375400 Ext. 1549
+                        </p>
+                    </div>
                 
+                    <div class="item">
+                        <img src="images/Ruth Maria Vasquez Cedeño.png" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Servicio al Usuario  </strong><br>
+                            Ruth Maria Vasquez Cedeño <br>
+                            Tel. 4375400 Ext. 1546
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="images/AngelicaMunoz.png" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Servicio al Usuario  </strong><br>
+                            Ruth Angélica Muñoz Bermejo <br>
+                            Tel. 3538100 Ext. 1548 
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="images/estelaVelosa.png" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Servicio al Usuario  </strong><br>
+                            Stella Velosa Corredor<br>
+                            Tel. 4375400 Ext. 1552
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="images/ClaudiaSaray.png" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Servicio al Usuario  </strong><br>
+                            Claudia Constanza Saray Baquero <br>
+                            Tel: 3538100 Ext: 1547
+                        </p>
+                    </div>
+
+                    <div class="item">
+                        <img src="images/Eliana_Mora.jpg" width="60" height="60" alt="APPS SCREEN" />
+                        <p align="center"> <strong>Servicio al Usuario </strong><br>
+                            Eliana Marcelly Mora Gonzalez<br>
+                            Tel. 3538100 Ext. 1546
+                        </p>
+                    </div>
+                </div>
             </div>
-            
         </div>
-    </div>
-    
-    
-</div> 
+    </div> 
 
-<!-- fin seccion Imaámenes Ubicación-->
-
-<!-- =========================
-     Inicio sección recomendaciones
-============================== -->
+    <!-- =========================
+         Inicio sección recomendaciones
+    ============================== -->
     <section class="download page" id="Recomendaciones">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <!-- DOWNLOAD NOW SECTION TITLE -->
                     <div class="section_title">
                         <h2>HERRAMIENTAS</h2>
                         <br>
-                       <p><img align="center" src="images/Herramientas.jpeg" width="550"  alt="Logros"> </p>
-                        <P>Para realizar una adecuada gestión de tu labor en el Sistema de Bibliotecas debes identificar los siguientes recursos:<br>
+                        <p><img align="center" src="images/Herramientas.jpeg" width="550" alt="Logros"> </p>
+                        <p>Para realizar una adecuada gestión de tu labor en el Sistema de Bibliotecas debes identificar los siguientes recursos:<br>
                             <ul>
                                 <li>Sistema de Gestión de Biblioteca KOHA</li>
                                 <li>Sistema Academusoft y Gestasoft</li>
@@ -909,18 +766,19 @@
                                 <li>Drive: todos los formatos compartidos que pertenecen a procedimientos del Sistema de Bibliotecas.</li>
                                 <li>Minisitio para Administrativos: información referente a Gestión de procesos y procedimientos institucionales.</li>
                                 <li>Páginas web institucional</li>
-                           <ul>
+                                <ul>
                                     <li>FUCS: <a href="http://www.fucsalud.edu.co/">http://www.fucsalud.edu.co/</a> </li>
                                     <li>Sistema de Bibliotecas: <a href="http://biblioteca.fucsalud.edu.co/">http://biblioteca.fucsalud.edu.co/</a></li>
                                 </ul>
-								<li>
-  <a href="images/Manual_de_comunicaciones_FUCS.pdf" target="_blank" rel="noopener">
-    Manual de comunicaciones
-  </a>
-</li>
-                        </ul>
+                                <li>
+                                    <a href="images/Manual_de_comunicaciones_FUCS.pdf" target="_blank" rel="noopener">
+                                        Manual de comunicaciones
+                                    </a>
+                                </li>
+                            </ul>
+                        </p>
                         <br>
-                        <h2>TIPS</h2> 
+                        <h2>TIPS</h2>
                         <p><img align="center" src="images/Tips2.jpg" width="550" height="350" alt="Logros"> </p>
                         <br>
                         
@@ -933,114 +791,60 @@
                             </ul>
                         </p>
             
-                        <p> <strong>RECUERDA</strong>
-                            <br><br>
+                        <p> <strong>RECUERDA</strong><br><br>
                             <ul>
                                 <li>Siempre portar el carné en un lugar visible</li>
                                 <li>Cumplimiento del horario</li>
                                 <li>No consumir alimentos en su lugar de trabajo</li>
                                 <li>Siempre seguir el conducto regular en todas las situaciones (jefe inmediato)</li>
                                 <li>El uso de sus dispositivos móviles en el lugar de trabajo no debe ser de manera permanente.</li>
-                                <li>Contestar y revisar el correo electrónico por lo menos dos veces al día  </li>
+                                <li>Contestar y revisar el correo electrónico por lo menos dos veces al día</li>
                                 <li>Entregar oportunamente las tareas y actividades solicitadas.</li>
                             </ul>
                         </p>
                         <p>
-                            <strong>También recuerda estos tiempos para el desarrollo de tus actividades diarias</strong>  <br> <br>
+                            <strong>También recuerda estos tiempos para el desarrollo de tus actividades diarias</strong><br><br>
                             <img src="images/horario.png" alt="">
                         </p><br><br><br><br><br>
                         <h2>¡TU VALOR AGREGADO!</h2>
                         <br>
-                        <p>
-                            <img src="images/funciones.png" alt="">
-                        </p>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
+                        <p><img src="images/funciones.png" alt=""></p>
+                        <br><br><br><br><br>
                         <h2>PREGUNTAS FRECUENTES</h2>
                         <p><img align="center" src="images/Preguntas1.jpeg" width="550" height="300" alt="Logros"> </p>
                         <p>
                             Sí un usuario pregunta <strong><em>¿cómo puede solicitar compra de material bibliográfico?</em></strong> <br>
                             Debes informar: que la ruta es Página web Fucsalud/Administrativos/Log in/ Servicios En línea/ Solicitud Compra de Material Bibliográfico. <br><br>
                             <strong><em>¿Quiénes pueden solicitar la compra de material bibliográfico?</em></strong> <br>
-                            Decanos, Directores de programa o secretarios académicos. Para el resto de la comunidad académica pueden realizar sugerencias de compra a través del Catálogo en línea <br> <br>
+                            Decanos, Directores de programa o secretarios académicos. Para el resto de la comunidad académica pueden realizar sugerencias de compra a través del Catálogo en línea <br><br>
                             <strong><em>¿Existe un comité de biblioteca?</em></strong><br>
                             Sí, y es realizado por la dirección del Sistema de Bibliotecas dos veces al año, cuenta con la participación de las directivas de la institución, decanos, directores de programa y jefes de servicio.
-                            </br>
-                            <br>
+                            <br><br>
                             <strong><em>Incapacidades médicas</em></strong><br>
                             Sí el usuario entrega el material bibliográfico después de la fecha de entrega e informa que tiene la incapacidad medica, se debe verificar que la fecha coincida con la fecha de devolución del material, debe tener el sello de la facultad; luego de esto, mencionar al jefe inmediato para la condonación de la multa.
-                            <br>
-                            <br>
+                            <br><br>
                             <strong><em>Sí un egresado pide acceso a las bases de datos.</em></strong><br>
                             Se le informa que debe contar con el correo institucional y contestar la encuesta de seguimiento al egresado en el siguiente enlace:
                             <br>
                             <a href="https://www.fucsalud.edu.co/sites/default/files/inline-images/servicios-virtuales-egresados-BB.pdf">https://www.fucsalud.edu.co/sites/default/files/inline-images/servicios-virtuales-egresados-BB.pdf</a> 
                         </p>
                     </div>
-                    <!--END DOWNLOAD NOW SECTION TITLE -->
-                </div>
-            </div>
-        </div>
-
-        <!-- (sección de tiendas comentada intencionalmente) -->
-    </section>
-    <!-- fin sección recomendaciones -->
-
-<!-- =========================
-     Inicio sección de contacto
-============================== -->
-    <section class="contact page" id="CONTACT">
-        <div class="section_overlay">
-            <div class="container">
-                <div class="col-md-10 col-md-offset-1 wow bounceIn">
-                    <!-- Start Contact Section Title-->
-                    <!-- (contenido de contacto comentado intencionalmente) -->
-                </div>
-            </div>
-
-            <div class="contact_form wow bounceIn">
-                <div class="container">
-                    <div class="Sucess"></div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 wow bounceInLeft">
-                        <div class="social_icons">
-                            <ul>
-                                <li><a href="https://www.fucsalud.edu.co/biblioteca"><i class="fa fa-home"></i></a>
-                                </li>
-                                <li><a href="https://www.facebook.com/BibliotecaFUCS/"><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li><a href="https://twitter.com/BiblioFucs"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li><a href="https://www.instagram.com/mi_fucs/"><i class="fa fa-instagram"></i></a>
-                                </li>
-                                <li><a href="https://plus.google.com/102638458241811960900"><i class="fa fa-google-plus"></i></a>
-                                </li>
-                                <li><a href="https://www.youtube.com/user/fucsalud1"><i class="fa fa-youtube-play"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- fin  sección de contacto -->
 
+    <!-- =========================
+         FOOTER
+    ============================== -->
     <section class="copyright">
         <h2></h2>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="copy_right_text">
-                        <p>Elaborado por: Sergio Ferney Ballesteros Cristancho &copy; Sistema de Bibliotecas FUCS 2025.</p>        
-                    </div>                     
+                        <p>Elaborado por: Sergio Ferney Ballesteros Cristancho &copy; Sistema de Bibliotecas FUCS 2025.</p>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="scroll_top">
@@ -1050,11 +854,10 @@
             </div>
         </div>
     </section>
-    <!-- END FOOTER -->
 
-<!-- =========================
-     SCRIPTS 
-============================== -->
+    <!-- =========================
+         SCRIPTS 
+    ============================== -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.js"></script>
